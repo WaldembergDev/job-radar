@@ -1,6 +1,6 @@
 from playwright.sync_api import sync_playwright
 from playwright_stealth import Stealth
-from utils import extrair_qnt_propostas
+from app.utils.utils import extrair_qnt_propostas
 
 def extrair_projetos_workana() -> list:
     """ Extrai todos os projetos das 5 primeiras páginas do site Workana 
@@ -34,7 +34,6 @@ def extrair_projetos_workana() -> list:
             page.goto(
                 f'https://www.workana.com/jobs?category=it-programming&language=pt&page={i}'
                 )
-            
             elementos = page.locator('.project-item').all()
             for elemento in elementos:
                 elemento.locator('.link').click()
