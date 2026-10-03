@@ -1,0 +1,36 @@
+name: WorkFlow Workana
+
+on:
+    schedule:
+        - cron: '30 12 * * *'
+    workflow_dispatch: 
+
+jobs:
+    cronjob:
+        runs-on: ubuntu-latest
+        
+        env:
+            GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+            SERVER_WEBSHARE: ${{ secrets.SERVER_WEBSHARE }}
+            USERNAME_WEBSHARE: ${{ secrets.USERNAME_WEBSHARE }}
+            PASSWORD_WEBSHARE: ${{ secrets.PASSWORD_WEBSHARE }}
+
+        steps:
+            - name: Clonar o repositório
+              uses: actions/checkout@v4
+        
+            - name: Instalar o uv e o Pythono
+              uses: astral-sh/setup-uv@v5
+              with:
+                version: 'latest'
+                enable-cache: true
+            
+            - name: Instalar dependências
+              run: |
+                uv sync
+            
+            - name: Instalar Navegadores do Playwright
+              run: uv run playwright install chromium --with-deps
+            
+            - name: Rodar o script
+              run: uv run main.py
