@@ -7,4 +7,4 @@ if __name__ == '__main__':
     response = agent.run('Tendo como base os meus dados, selecione os três melhores projetos que mais dão um match com os meus conhecimentos')
 
     for projeto in response.content.projetos:
-        print(f'Projeto: {projeto.titulo}\n')
+        print(f'Projeto: {projeto.titulo}\n', flush=True)
