@@ -14,6 +14,7 @@ jobs:
             SERVER_WEBSHARE: ${{ secrets.SERVER_WEBSHARE }}
             USERNAME_WEBSHARE: ${{ secrets.USERNAME_WEBSHARE }}
             PASSWORD_WEBSHARE: ${{ secrets.PASSWORD_WEBSHARE }}
+            PYTHONUNBUFFERED: "1"
 
         steps:
             - name: Clonar o repositório
