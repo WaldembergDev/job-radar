@@ -6,6 +6,8 @@ from config import settings
 
 USERNAME_WEBSHARE = getattr(settings, 'USERNAME_WEBSHARE')
 PASSWORD_WEBSHARE = getattr(settings, 'PASSWORD_WEBSHARE')
+SERVER_WEBSHARE = getattr(settings, 'SERVER_WEBSHARE')
+
 
 def extrair_projetos_workana() -> list:
     """ Extrai todos os projetos das 5 primeiras páginas do site Workana 
@@ -15,14 +17,14 @@ def extrair_projetos_workana() -> list:
     """
     with sync_playwright() as p:
         browser = p.chromium.launch(
-            headless=False,
+            headless=True,
             args=[
                 "--headless=new",
                 "--disable-blink-features=AutomationControlled",
                 "--start-maximized"
                 ],
             proxy={
-                'server': 'http://31.59.20.176:6754/',
+                'server': SERVER_WEBSHARE,
                 'username': USERNAME_WEBSHARE,
                 'password': PASSWORD_WEBSHARE
             }
