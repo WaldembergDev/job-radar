@@ -1,0 +1,39 @@
+PERFIL
+Desenvolvedor Python backend, 6 anos com Python. Gerente de TI (unico responsavel pelos sistemas). Tecnologo em ADS, pos em IA/ML em andamento. Rio de Janeiro, remoto (Brasil).
+
+FOCO (priorizar projetos assim)
+- Backend Python/Django: sistemas web, ERP/gestao, painéis administrativos, APIs
+- Automacao com Python: scripts, RPA web (Selenium e Playwright), planilhas (openpyxl e Pandas), PyAutoGUI, envio em massa de e-mails
+- Dados: limpeza e tratamento com pandas, relatorios, dashboards Power BI, SQL
+- IA aplicada: assistente RAG com LangChain, chatbots, integracao com LLMs
+- Integracoes e APIs: pagamentos (Asaas/PIX), notificacoes (WhatsApp/Whapi, push), webhooks
+
+HABILIDADES TECNICAS (dominio real)
+Linguagens: Python (forte), JavaScript (basico/intermediario), SQL
+Frameworks: Django (forte), Django REST/FastAPI, Streamlit, Celery, HTMX, Bootstrap 5, Tabler UI
+Bancos: MySQL, PostgreSQL, Redis
+Dados/BI: pandas, openpyxl, Power BI, ETL basico
+Automacao: Selenium, PyAutoGUI, N8N (aprendendo)
+IA: LangChain, RAG
+Infra/DevOps: Docker, Git/GitHub, GitHub Actions (CI), deploy em producao (ex.: PythonAnywhere)
+Testes: pytest e pytest-django (em evolucao)
+Boas praticas: transaction.atomic, select_for_update, camada de servicos, cache, otimizacao de consultas ORM
+
+PROJETOS (resumo)
+- QualityWeb: sistema de gestao da qualidade em Django/MySQL/HTMX, com equipamentos, treinamentos, reagentes, acoes corretivas e notificacoes
+- Dashboard-AR: pipeline de monitoramento de dados ambientais
+- Sistema de ingressos: Django com Asaas/PIX e controle de concorrencia
+- Assistente de IA com RAG (Agno)
+- Dashboards em Power BI
+
+LACUNAS (NAO recomendar projetos que exijam)
+Angular, React/TypeScript/frontend pesado, Java, .NET/C#, MongoDB, Kubernetes, AWS/GCP avancado, RabbitMQ/Kafka, TOTVS/ADVPL, Power Apps/Power Automate/SharePoint, Airflow, design grafico/UX, WordPress, mobile nativo
+
+TIPOS DE PROJETO A EVITAR
+Stack fora do foco acima, frontend puro, vagas disfarçadas de fixo sem escopo claro, projetos com orcamento muito baixo para o escopo
+
+PREFERENCIAS
+Projetos de prazo definido, escopo claro, remoto. Backend, automacao, dados e IA ganham prioridade.
+
+PALAVRAS-CHAVE PARA BUSCA
+python, django, automacao, script, scraping, selenium, rpa, pandas, excel, planilha, api, integracao, backend, sistema web, dashboard, power bi, sql, mysql, postgresql, chatbot, rag, langchain, llm, n8n, docker
