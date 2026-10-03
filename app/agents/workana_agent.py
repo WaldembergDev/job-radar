@@ -1,14 +1,10 @@
 from agno.agent import Agent
 from agno.models.google import Gemini
-from dotenv import load_dotenv
 from ..services.services_workana import extrair_projetos_workana
 from agno.knowledge.knowledge import Knowledge
 from agno.vectordb.chroma import ChromaDb
 from agno.knowledge.embedder.google import GeminiEmbedder
 from app.schemas.projetos import ListaProjetos
-
-
-load_dotenv()
 
 
 def criar_agent():

@@ -1,14 +1,11 @@
 from playwright.sync_api import sync_playwright
 from playwright_stealth import Stealth
 from app.utils import extrair_qnt_propostas
-from dotenv import load_dotenv
-import os
+from config import settings
 
 
-load_dotenv()
-
-USERNAME_WEBSHARE = os.getenv('USERNAME_WEBSHARE')
-PASSWORD_WEBSHARE = os.getenv('PASSWORD_WEBSHARE')
+USERNAME_WEBSHARE = getattr(settings, 'USERNAME_WEBSHARE')
+PASSWORD_WEBSHARE = getattr(settings, 'PASSWORD_WEBSHARE')
 
 def extrair_projetos_workana() -> list:
     """ Extrai todos os projetos das 5 primeiras páginas do site Workana 
