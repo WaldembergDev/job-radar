@@ -1,6 +1,14 @@
 from playwright.sync_api import sync_playwright
 from playwright_stealth import Stealth
-from app.utils.utils import extrair_qnt_propostas
+from app.utils import extrair_qnt_propostas
+from dotenv import load_dotenv
+import os
+
+
+load_dotenv()
+
+USERNAME_WEBSHARE = os.getenv('USERNAME_WEBSHARE')
+PASSWORD_WEBSHARE = os.getenv('PASSWORD_WEBSHARE')
 
 def extrair_projetos_workana() -> list:
     """ Extrai todos os projetos das 5 primeiras páginas do site Workana 
@@ -15,8 +23,13 @@ def extrair_projetos_workana() -> list:
                 "--headless=new",
                 "--disable-blink-features=AutomationControlled",
                 "--start-maximized"
-                ]
-            )
+                ],
+            proxy={
+                'server': 'http://31.59.20.176:6754/',
+                'username': USERNAME_WEBSHARE,
+                'password': PASSWORD_WEBSHARE
+            }
+        )
 
         context = browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
