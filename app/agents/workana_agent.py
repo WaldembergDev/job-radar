@@ -21,7 +21,7 @@ def criar_agent():
     )
 
     knowledge.insert(path='docs/')
-
+    
     agent = Agent(
         model=Gemini(id='gemini-3.1-flash-lite'),
         description='Você é um especialista em análise de projetos de sistemas',
@@ -29,7 +29,9 @@ def criar_agent():
         knowledge=knowledge,
         search_knowledge=True,
         markdown=True,
-        output_schema=ListaProjetos
+        output_schema=ListaProjetos,
+        retries=3,
+        delay_between_retries=30,
     )
 
     return agent
