@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos Workana</title>
+</head>
+<body>
+    <h1>Relatório de projetos</h1>
+    {% for projeto in projetos %}
+        <h2><a href="{{ projeto.link }}" target="_blank">{{ projeto.titulo }}</a></h2>
+        <p><strong>Descrição: </strong>{{ projeto.conteudo }}</p>
+        <p><strong>Quantidade de Propostas: </strong>{{ projeto.qnt_propostas }}</p>
+        <p><strong>Valor: </strong>{{ projeto.valor }}</p>
+        <p><strong>Análise: </strong>{{ projeto.analise }}</p>
+        <hr>
+    {% endfor %}
+</body>
+</html>

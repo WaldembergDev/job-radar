@@ -5,6 +5,8 @@ class InformacoesProjeto(BaseModel):
     link: str = Field(description='O link do projeto')
     conteudo: str = Field(description='A descrição do projeto')
     qnt_propostas: int = Field(description='A quantidade de propostas que foram enviadas')
+    valor: str = Field(description='Valor do projeto')
+    analise: str = Field(description='Análise do projeto de acordo com as capacidades técnicas do usuário')
 
 
 class ListaProjetos(BaseModel):

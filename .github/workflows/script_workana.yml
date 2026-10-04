@@ -14,6 +14,13 @@ jobs:
             SERVER_WEBSHARE: ${{ secrets.SERVER_WEBSHARE }}
             USERNAME_WEBSHARE: ${{ secrets.USERNAME_WEBSHARE }}
             PASSWORD_WEBSHARE: ${{ secrets.PASSWORD_WEBSHARE }}
+            # Variáveis de ambiente de e-mail
+            SENHA_EMAIL: ${{ secrets.SENHA_EMAIL }}
+            HOST: ${{ secrets.HOST }}
+            FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+            SMTP_EMAIL: ${{ secrets.SMTP_EMAIL }}
+            TO_EMAIL: ${{ secrets.TO_EMAIL }}
+            
             PYTHONUNBUFFERED: "1"
 
         steps:
