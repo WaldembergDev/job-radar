@@ -6,8 +6,10 @@ if __name__ == '__main__':
 
     agent = criar_agent()
     response = agent.run(
-        'Tendo como base meus conhecimentos técnicos, selecione os três melhores projetos que mais dão um match com os meus conhecimentos'
-        )
+        'Use a ferramenta para buscar os projetos da Workana e selecione até 3 que tenham '
+        'maior aderência ao meu perfil, aplicando as regras de descarte. '
+        'Se nenhum projeto passar nos critérios, retorne a lista vazia.'
+    )
     projetos = response.content.projetos
-    print(projetos)
+    print("Número de projetos localizados: ", len(projetos), flush=True)
     email_workana(projetos)
