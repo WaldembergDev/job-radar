@@ -16,8 +16,8 @@ if all([USERNAME_WEBSHARE, PASSWORD_WEBSHARE, SERVER_WEBSHARE]):
     }
 
 # configurações de e-mail
-FROM_EMAIL=os.getenv('FROM_EMAIL')
-SENHA_EMAIL=os.getenv('SENHA_EMAIL')
-HOST=os.getenv('HOST')
-SMTP_EMAIL=os.getenv('SMTP_EMAIL')
-TO_EMAIL=os.getenv('TO_EMAIL')
+FROM_EMAIL=os.getenv('FROM_EMAIL', default=None)
+SENHA_EMAIL=os.getenv('SENHA_EMAIL', default=None)
+HOST=os.getenv('HOST', default=None)
+SMTP_EMAIL=os.getenv('SMTP_EMAIL', default=None)
+TO_EMAIL=os.getenv('TO_EMAIL', default=None)
