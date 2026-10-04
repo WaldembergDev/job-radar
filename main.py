@@ -9,5 +9,5 @@ if __name__ == '__main__':
         'Tendo como base meus conhecimentos técnicos, selecione os três melhores projetos que mais dão um match com os meus conhecimentos'
         )
     projetos = response.content.projetos
-
+    print(projetos)
     email_workana(projetos)
